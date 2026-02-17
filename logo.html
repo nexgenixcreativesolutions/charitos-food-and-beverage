@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Charito's Food and Beverages Logo</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Pacifico&family=Nunito:wght@400;700;800&display=swap');
+
+  body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #1a1a2e;
+    gap: 40px;
+    padding: 40px;
+    box-sizing: border-box;
+  }
+
+  .logo-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .logo-container {
+    position: relative;
+    width: 420px;
+    height: 420px;
+  }
+
+  /* Download buttons */
+  .btn-row {
+    display: flex;
+    gap: 12px;
+  }
+  .btn {
+    background: #e63946;
+    color: white;
+    border: none;
+    padding: 12px 28px;
+    border-radius: 30px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 800;
+    font-size: 14px;
+    cursor: pointer;
+    transition: transform 0.15s, background 0.15s;
+    letter-spacing: 0.5px;
+  }
+  .btn:hover { background: #c1121f; transform: scale(1.04); }
+  .btn.outline {
+    background: transparent;
+    border: 2px solid #e63946;
+    color: #e63946;
+  }
+  .btn.outline:hover { background: #e6394620; }
+
+  label {
+    font-family: 'Nunito', sans-serif;
+    color: #ffffff80;
+    font-size: 13px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  /* Variant backgrounds */
+  .variants {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .variant {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  .variant svg {
+    border-radius: 16px;
+    box-shadow: 0 8px 32px #00000060;
+  }
+</style>
+</head>
+<body>
+
+<div class="logo-wrapper">
+  <label>Primary Logo</label>
+
+  <!-- MAIN LOGO SVG -->
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 420" width="420" height="420" id="mainLogo">
+    <defs>
+      <!-- Warm radial bg -->
+      <radialGradient id="bgGrad" cx="50%" cy="45%" r="60%">
+        <stop offset="0%" stop-color="#fff8ee"/>
+        <stop offset="100%" stop-color="#ffe8c0"/>
+      </radialGradient>
+      <!-- Red banner gradient -->
+      <linearGradient id="redBanner" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#e63946"/>
+        <stop offset="100%" stop-color="#b5121b"/>
+      </linearGradient>
+      <!-- Gold accent -->
+      <linearGradient id="goldGrad" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#ffd166"/>
+        <stop offset="100%" stop-color="#f4a231"/>
+      </linearGradient>
+      <!-- Plate shine -->
+      <radialGradient id="plateGrad" cx="40%" cy="30%" r="65%">
+        <stop offset="0%" stop-color="#ffffff"/>
+        <stop offset="100%" stop-color="#f0e6d3"/>
+      </radialGradient>
+      <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+        <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#00000030"/>
+      </filter>
+      <filter id="textShadow">
+        <feDropShadow dx="1" dy="2" stdDeviation="2" flood-color="#00000050"/>
+      </filter>
+    </defs>
+
+    <!-- Outer circle background -->
+    <circle cx="210" cy="210" r="200" fill="url(#bgGrad)" filter="url(#shadow)"/>
+
+    <!-- Decorative outer ring -->
+    <circle cx="210" cy="210" r="200" fill="none" stroke="#e63946" stroke-width="6"/>
+    <circle cx="210" cy="210" r="190" fill="none" stroke="#ffd166" stroke-width="2" stroke-dasharray="8,5"/>
+
+    <!-- Food icons arranged in circle -->
+    <!-- BURGER (top center) -->
+    <g transform="translate(210,58)">
+      <!-- bun top -->
+      <ellipse cx="0" cy="-12" rx="20" ry="11" fill="#f4a231"/>
+      <ellipse cx="0" cy="-12" rx="20" ry="11" fill="#f4a231"/>
+      <!-- sesame seeds -->
+      <ellipse cx="-6" cy="-16" rx="2.5" ry="1.5" fill="#fff" opacity="0.7"/>
+      <ellipse cx="4" cy="-18" rx="2" ry="1.2" fill="#fff" opacity="0.7"/>
+      <ellipse cx="8" cy="-13" rx="1.8" ry="1.2" fill="#fff" opacity="0.7"/>
+      <!-- patty -->
+      <rect x="-18" y="-4" width="36" height="6" rx="3" fill="#7b3f00"/>
+      <!-- lettuce -->
+      <ellipse cx="0" cy="2" rx="21" ry="4" fill="#6abf4b"/>
+      <!-- cheese -->
+      <ellipse cx="0" cy="4" rx="19" ry="3" fill="#ffd166"/>
+      <!-- bun bottom -->
+      <ellipse cx="0" cy="8" rx="19" ry="7" fill="#f4a231"/>
+    </g>
+
+    <!-- RICE TRAY (top right) -->
+    <g transform="translate(316,108) rotate(30)">
+      <!-- tray -->
+      <ellipse cx="0" cy="0" rx="22" ry="12" fill="#e0c8a0"/>
+      <!-- rice mound -->
+      <ellipse cx="0" cy="-4" rx="17" ry="9" fill="white"/>
+      <!-- viand color blobs -->
+      <ellipse cx="-6" cy="-5" rx="5" ry="4" fill="#e63946" opacity="0.85"/>
+      <ellipse cx="6" cy="-5" rx="5" ry="4" fill="#f4a231" opacity="0.85"/>
+    </g>
+
+    <!-- SODA CUP (right) -->
+    <g transform="translate(345,210)">
+      <path d="M-14,-20 L-16,20 L16,20 L14,-20 Z" fill="#e63946" rx="4"/>
+      <path d="M-14,-20 L14,-20" stroke="white" stroke-width="2" fill="none"/>
+      <!-- straw -->
+      <rect x="4" y="-32" width="4" height="30" rx="2" fill="#ffd166"/>
+      <!-- cup shine -->
+      <path d="M-10,-15 L-12,10" stroke="white" stroke-width="2" opacity="0.4" stroke-linecap="round"/>
+      <!-- lid -->
+      <ellipse cx="0" cy="-20" rx="14" ry="4" fill="#c1121f"/>
+    </g>
+
+    <!-- MURTABAK / ROTI (bottom right) -->
+    <g transform="translate(316,312) rotate(-20)">
+      <rect x="-20" y="-12" width="40" height="24" rx="5" fill="#f4d58d"/>
+      <!-- grid lines for roti -->
+      <line x1="-20" y1="0" x2="20" y2="0" stroke="#e0a000" stroke-width="1.5" opacity="0.7"/>
+      <line x1="0" y1="-12" x2="0" y2="12" stroke="#e0a000" stroke-width="1.5" opacity="0.7"/>
+      <!-- filling peek -->
+      <ellipse cx="0" cy="0" rx="8" ry="5" fill="#7b3f00" opacity="0.5"/>
+    </g>
+
+    <!-- MILKSHAKE (bottom center) -->
+    <g transform="translate(210,362)">
+      <!-- glass -->
+      <path d="M-11,-22 L-14,18 L14,18 L11,-22 Z" fill="#ffd166"/>
+      <!-- whip cream -->
+      <ellipse cx="0" cy="-24" rx="13" ry="8" fill="white"/>
+      <!-- cherry on top -->
+      <circle cx="0" cy="-30" r="4" fill="#e63946"/>
+      <line x1="0" y1="-26" x2="0" y2="-30" stroke="#6abf4b" stroke-width="1.5"/>
+      <!-- straw -->
+      <rect x="5" y="-38" width="3" height="32" rx="1.5" fill="#e63946"/>
+    </g>
+
+    <!-- PASTA FORK (bottom left) -->
+    <g transform="translate(104,312) rotate(20)">
+      <!-- pasta swirl -->
+      <path d="M-15,5 Q-5,-15 5,0 Q15,-15 20,5" fill="none" stroke="#f4d58d" stroke-width="4" stroke-linecap="round"/>
+      <path d="M-10,10 Q0,-5 10,8" fill="none" stroke="#f4a231" stroke-width="3" stroke-linecap="round"/>
+      <!-- fork -->
+      <line x1="-18" y1="-18" x2="-18" y2="18" stroke="#c0c0c0" stroke-width="2.5"/>
+      <line x1="-21" y1="-18" x2="-21" y2="-8" stroke="#c0c0c0" stroke-width="1.5"/>
+      <line x1="-15" y1="-18" x2="-15" y2="-8" stroke="#c0c0c0" stroke-width="1.5"/>
+    </g>
+
+    <!-- SHAWARMA wrap (left) -->
+    <g transform="translate(75,210) rotate(-10)">
+      <!-- wrap body -->
+      <ellipse cx="0" cy="0" rx="12" ry="24" fill="#f4d58d"/>
+      <!-- filling stripes -->
+      <ellipse cx="0" cy="-5" rx="8" ry="5" fill="#7b3f00" opacity="0.7"/>
+      <ellipse cx="0" cy="3" rx="8" ry="4" fill="#6abf4b" opacity="0.8"/>
+      <ellipse cx="0" cy="10" rx="8" ry="3" fill="#e63946" opacity="0.6"/>
+      <!-- foil wrap bottom -->
+      <ellipse cx="0" cy="18" rx="12" ry="5" fill="#c0c0c0" opacity="0.7"/>
+    </g>
+
+    <!-- FRIES (top left) -->
+    <g transform="translate(104,108) rotate(-30)">
+      <!-- fry box -->
+      <path d="M-14,0 L-12,18 L12,18 L14,0 Z" fill="#e63946"/>
+      <line x1="-14" y1="0" x2="14" y2="0" stroke="#c1121f" stroke-width="1"/>
+      <!-- fries sticks -->
+      <rect x="-9" y="-16" width="4" height="18" rx="2" fill="#ffd166"/>
+      <rect x="-2" y="-20" width="4" height="22" rx="2" fill="#f4a231"/>
+      <rect x="5" y="-14" width="4" height="16" rx="2" fill="#ffd166"/>
+    </g>
+
+    <!-- CENTER PLATE with decorative ring -->
+    <circle cx="210" cy="210" r="88" fill="white" opacity="0.15"/>
+    <circle cx="210" cy="210" r="84" fill="url(#plateGrad)"/>
+    <circle cx="210" cy="210" r="84" fill="none" stroke="#e63946" stroke-width="3"/>
+    <circle cx="210" cy="210" r="78" fill="none" stroke="#ffd166" stroke-width="1.5" stroke-dasharray="5,4"/>
+
+    <!-- CHARITO'S text - top banner arc -->
+    <path id="topArc" d="M 140,210 A 70,70 0 0,1 280,210" fill="none"/>
+    <text font-family="Pacifico, cursive" font-size="26" fill="#e63946" filter="url(#textShadow)" text-anchor="middle">
+      <textPath href="#topArc" startOffset="50%">Charito's</textPath>
+    </text>
+
+    <!-- Center star/divider -->
+    <text x="210" y="218" text-anchor="middle" font-family="Nunito, sans-serif" font-size="11" font-weight="800" fill="#7b3f00" letter-spacing="2" text-transform="uppercase">FOOD &amp;</text>
+    <text x="210" y="232" text-anchor="middle" font-family="Nunito, sans-serif" font-size="11" font-weight="800" fill="#7b3f00" letter-spacing="2">BEVERAGES</text>
+
+    <!-- Small stars as accents -->
+    <text x="168" y="222" text-anchor="middle" font-size="10" fill="#ffd166">★</text>
+    <text x="252" y="222" text-anchor="middle" font-size="10" fill="#ffd166">★</text>
+
+    <!-- Bottom arc text -->
+    <path id="bottomArc" d="M 140,210 A 70,70 0 0,0 280,210" fill="none"/>
+    <text font-family="Nunito, sans-serif" font-size="9" font-weight="800" fill="#b5121b" letter-spacing="3" text-anchor="middle" opacity="0.8">
+      <textPath href="#bottomArc" startOffset="50%">EST. 2020 · HOMEMADE</textPath>
+    </text>
+
+  </svg>
+
+  <div class="btn-row">
+    <button class="btn" onclick="downloadSVG()">⬇ Download SVG</button>
+    <button class="btn outline" onclick="downloadPNG()">⬇ Download PNG</button>
+  </div>
+</div>
+
+<!-- Variants row -->
+<div class="variants">
+  <!-- Dark bg variant -->
+  <div class="variant">
+    <label>Dark Background</label>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 420" width="200" height="200">
+      <rect width="420" height="420" rx="24" fill="#1a1a2e"/>
+      <use href="#mainLogo"/>
+    </svg>
+  </div>
+
+  <!-- White bg variant -->
+  <div class="variant">
+    <label>Light Background</label>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 420" width="200" height="200">
+      <rect width="420" height="420" rx="24" fill="#fff8ee"/>
+      <use href="#mainLogo"/>
+    </svg>
+  </div>
+
+  <!-- Red bg variant -->
+  <div class="variant">
+    <label>Brand Red</label>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 420" width="200" height="200">
+      <rect width="420" height="420" rx="24" fill="#e63946"/>
+      <use href="#mainLogo"/>
+    </svg>
+  </div>
+</div>
+
+<script>
+function getSVGString() {
+  const svg = document.getElementById('mainLogo');
+  const serializer = new XMLSerializer();
+  return serializer.serializeToString(svg);
+}
+
+function downloadSVG() {
+  const svgStr = getSVGString();
+  const blob = new Blob([svgStr], {type:'image/svg+xml'});
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'charitos-logo.svg';
+  a.click();
+}
+
+function downloadPNG() {
+  const svg = document.getElementById('mainLogo');
+  const svgStr = getSVGString();
+  const canvas = document.createElement('canvas');
+  canvas.width = 840; canvas.height = 840;
+  const ctx = canvas.getContext('2d');
+  const img = new Image();
+  const blob = new Blob([svgStr], {type:'image/svg+xml'});
+  const url = URL.createObjectURL(blob);
+  img.onload = () => {
+    ctx.drawImage(img, 0, 0, 840, 840);
+    const a = document.createElement('a');
+    a.href = canvas.toDataURL('image/png');
+    a.download = 'charitos-logo.png';
+    a.click();
+    URL.revokeObjectURL(url);
+  };
+  img.src = url;
+}
+</script>
+</body>
+</html>
